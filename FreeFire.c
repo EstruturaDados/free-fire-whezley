@@ -3,12 +3,14 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+void exibirMenu();
 // Código da Ilha – Edição Free Fire
 // Nível: Mestre
 // Este programa simula o gerenciamento avançado de uma mochila com componentes coletados durante a fuga de uma ilha.
 // Ele introduz ordenação com critérios e busca binária para otimizar a gestão dos recursos.
 
 int main() {
+    exibirMenu();
     // Menu principal com opções:
     // 1. Adicionar um item
     // 2. Remover um item
@@ -37,7 +39,58 @@ int main() {
 // limparTela():
 // Simula a limpeza da tela imprimindo várias linhas em branco.
 
-// exibirMenu():
+void exibirMenu(){
+    int option;
+do
+{printf("Menu Principal\n"
+    "1. Adicionar um item\n"
+    "2. Remover um item\n"
+    "3. Listar todos os itens\n"
+    "4. Ordenar os itens por critério (nome, tipo, prioridade)\n"
+    "5. Realizar busca binária por nome\n"
+    "0. Sair\n");
+
+scanf("%d",&option);
+switch (option
+)
+{
+case 1:
+
+break;
+case 2:
+
+break;
+case 3:
+
+break;
+case 4:
+
+break;
+case 5:
+
+break;
+case 0:printf("Encerrando o programa...");
+break;
+default:
+printf("Opcao invalida\n");
+    break;
+}
+
+
+} while (
+    option != 0
+);
+
+
+
+
+
+
+
+
+
+
+}
 // Apresenta o menu principal ao jogador, com destaque para status da ordenação.
 
 // inserirItem():

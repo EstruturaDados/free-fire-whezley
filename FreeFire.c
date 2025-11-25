@@ -3,7 +3,20 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#define TAMANHO 10
+int tamanhoAtual = 0;
+
+typedef struct{
+char nome[30];
+char tipo[20];
+int quantidade;
+int prioridade;
+} Item;
+
+Item mochila[TAMANHO];
+
 void exibirMenu();
+void inserirItem();
 // Código da Ilha – Edição Free Fire
 // Nível: Mestre
 // Este programa simula o gerenciamento avançado de uma mochila com componentes coletados durante a fuga de uma ilha.
@@ -55,7 +68,7 @@ switch (option
 )
 {
 case 1:
-
+inserirItem();
 break;
 case 2:
 
@@ -92,8 +105,25 @@ printf("Opcao invalida\n");
 
 }
 // Apresenta o menu principal ao jogador, com destaque para status da ordenação.
+void inserirItem(){
+    if (tamanhoAtual < 10)
+    {
 
-// inserirItem():
+        printf("Nome:\n");
+scanf("%s",(mochila+tamanhoAtual) -> nome);
+
+printf("Tipo:\n");
+scanf("%s",(mochila+tamanhoAtual) -> tipo);
+
+printf("Quantidade:\n");
+scanf("%d",&((mochila+tamanhoAtual) -> quantidade));
+
+printf("prioridade:\n");
+scanf("%d",&((mochila+tamanhoAtual) -> prioridade ));
+
+tamanhoAtual += 1;
+}else{printf("Limite maximo atingido");}
+}
 // Adiciona um novo componente à mochila se houver espaço.
 // Solicita nome, tipo, quantidade e prioridade.
 // Após inserir, marca a mochila como "não ordenada por nome".

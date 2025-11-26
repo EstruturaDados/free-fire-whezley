@@ -17,6 +17,7 @@ Item mochila[TAMANHO];
 
 void exibirMenu();
 void inserirItem();
+void listarItens();
 // Código da Ilha – Edição Free Fire
 // Nível: Mestre
 // Este programa simula o gerenciamento avançado de uma mochila com componentes coletados durante a fuga de uma ilha.
@@ -74,7 +75,7 @@ case 2:
 
 break;
 case 3:
-
+listarItens();
 break;
 case 4:
 
@@ -132,7 +133,36 @@ tamanhoAtual += 1;
 // Permite remover um componente da mochila pelo nome.
 // Se encontrado, reorganiza o vetor para preencher a lacuna.
 
-// listarItens():
+void listarItens(){
+if (mochila == NULL)
+{
+printf("Mochila vazia\n");
+return;
+}else{
+for (int i = 0; i < tamanhoAtual; i++)
+{
+printf("Item %d:\n Nome: %s\n Tipo: %s\n Quantidade: %d\n Prioridade: %d\n",i+1,
+    (mochila+i) -> nome,
+    (mochila+i) -> tipo,
+    (mochila+i) -> quantidade,
+    (mochila+i) -> prioridade
+        );
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+
+}
 // Exibe uma tabela formatada com todos os componentes presentes na mochila.
 
 // menuDeOrdenacao():
